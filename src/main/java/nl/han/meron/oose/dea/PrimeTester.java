@@ -1,8 +1,9 @@
 package nl.han.meron.oose.dea;
 
+import nl.han.meron.oose.dea.exception.OuchIFoundThirtySevenAndHenceMustDieException;
 import org.apache.commons.math3.primes.Primes;
 
-public class PrimeTester implements Runnable{
+public class PrimeTester implements Runnable {
 
     NumberUnderTest numberUnderTest;
     int highestNumberToTest;
@@ -12,16 +13,19 @@ public class PrimeTester implements Runnable{
         this.highestNumberToTest = highestNumberToTest;
     }
 
-    public void startTesting() {
+    public void startTesting() throws OuchIFoundThirtySevenAndHenceMustDieException {
 
         while (true) {
 
             int number = numberUnderTest.getNumber();
 
-            if (number > highestNumberToTest){
+            if (number > highestNumberToTest) {
                 break;
             }
 
+            if (number == 37) {
+                throw new OuchIFoundThirtySevenAndHenceMustDieException();
+            }
             boolean isPrime = Primes.isPrime(number);
 
             if (isPrime) {
@@ -30,7 +34,11 @@ public class PrimeTester implements Runnable{
         }
     }
 
-    public void run() {
-        startTesting();
+    public void run(){
+        try {
+            startTesting();
+        } catch (OuchIFoundThirtySevenAndHenceMustDieException e) {
+            System.out.println(Thread.currentThread().getId() +  " found Thirty Seven and must die.");
+        }
     }
 }
