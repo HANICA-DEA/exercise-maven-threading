@@ -15,10 +15,6 @@ public class PrimeTestingApp {
     private void startTesting() {
         NumberUnderTest numberUnderTest = new NumberUnderTest();
 
-//        PrimeTester tester = new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST);
-
-//        tester.startTesting();
-
         List<PrimeTester> testers = new ArrayList<PrimeTester>();
         testers.add(new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST));
         testers.add(new PrimeTester(numberUnderTest, HIGHEST_NUMBER_TO_TEST));
