@@ -1,6 +1,8 @@
-package ???;
+package nl.han.meron.oose.dea;
 
-public class PrimeTester {
+import org.apache.commons.math3.primes.Primes;
+
+public class PrimeTester implements Runnable{
 
     NumberUnderTest numberUnderTest;
     int highestNumberToTest;
@@ -20,11 +22,15 @@ public class PrimeTester {
                 break;
             }
 
-//            boolean isPrime = Primes.isPrime(number);
+            boolean isPrime = Primes.isPrime(number);
 
             if (isPrime) {
                 System.out.println(Thread.currentThread().getId() + " found a prime number: " + number);
             }
         }
+    }
+
+    public void run() {
+        startTesting();
     }
 }
