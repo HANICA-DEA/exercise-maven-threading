@@ -28,5 +28,9 @@ out/
 .idea/tasks.xml
 
 # OSX
-.iml
+*.iml
 .DS_Store
+
+# Maven
+target/
+

@@ -1,4 +1,4 @@
-package nl.han.meron.oose.dea;
+package nl.han.meron.oose.dea.primetester;
 
 public class NumberUnderTest {
 

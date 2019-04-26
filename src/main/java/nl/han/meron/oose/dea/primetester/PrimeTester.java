@@ -1,28 +1,28 @@
-package nl.han.meron.oose.dea;
+package nl.han.meron.oose.dea.primetester;
 
 import org.apache.commons.math3.primes.Primes;
 
-public class PrimeTester implements Runnable{
+public class PrimeTester implements Runnable {
 
-    NumberUnderTest numberUnderTest;
-    int highestNumberToTest;
+    private NumberUnderTest numberUnderTest;
+    private int highestNumberToTest;
 
     public PrimeTester(NumberUnderTest numberUnderTest, int highestNumberToTest) {
         this.numberUnderTest = numberUnderTest;
         this.highestNumberToTest = highestNumberToTest;
     }
 
-    public void startTesting() {
+    private void startTesting() {
 
         while (true) {
 
-            int number = numberUnderTest.getNumber();
+            var number = numberUnderTest.getNumber();
 
-            if (number > highestNumberToTest){
+            if (number > highestNumberToTest) {
                 break;
             }
 
-            boolean isPrime = Primes.isPrime(number);
+            var isPrime = Primes.isPrime(number);
 
             if (isPrime) {
                 System.out.println(Thread.currentThread().getId() + " found a prime number: " + number);
