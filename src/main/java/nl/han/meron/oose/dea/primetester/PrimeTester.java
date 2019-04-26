@@ -1,12 +1,12 @@
-package nl.han.meron.oose.dea;
+package nl.han.meron.oose.dea.primetester;
 
-import nl.han.meron.oose.dea.exception.OuchIFoundThirtySevenAndHenceMustDieException;
+import nl.han.meron.oose.dea.primetester.exception.OuchIFoundThirtySevenAndHenceMustDieException;
 import org.apache.commons.math3.primes.Primes;
 
 public class PrimeTester implements Runnable {
 
-    NumberUnderTest numberUnderTest;
-    int highestNumberToTest;
+    private NumberUnderTest numberUnderTest;
+    private int highestNumberToTest;
 
     public PrimeTester(NumberUnderTest numberUnderTest, int highestNumberToTest) {
         this.numberUnderTest = numberUnderTest;
@@ -17,7 +17,7 @@ public class PrimeTester implements Runnable {
 
         while (true) {
 
-            int number = numberUnderTest.getNumber();
+            var number = numberUnderTest.getNumber();
 
             if (number > highestNumberToTest) {
                 break;
@@ -26,7 +26,7 @@ public class PrimeTester implements Runnable {
             if (number == 37) {
                 throw new OuchIFoundThirtySevenAndHenceMustDieException();
             }
-            boolean isPrime = Primes.isPrime(number);
+            var isPrime = Primes.isPrime(number);
 
             if (isPrime) {
                 System.out.println(Thread.currentThread().getId() + " found a prime number: " + number);
