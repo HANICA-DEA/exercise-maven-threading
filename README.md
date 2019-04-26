@@ -5,12 +5,12 @@
 * Creeer een Java project met Maven
     * Kies een groupId die zinnig is en aan de conventies voldoet
     * Kies een artifactId die zinnig is.
-* Zorg ervoor dat je JUnit versie 4.12 als dependency in je pom hebt staan
+* Zorg ervoor dat je JUnit Jupiter versie 5.4.0 als dependency in je pom hebt staan
 * Plaats de drie bestanden die in dit project zetten op de juiste plek in je nieuwe project.
 
 ## Deel 2 Project werkend maken
 
-Het project bevat nu een klein programmatje waarmee je kunt testen of getallen
+Het project bevat nu een klein programmaatje waarmee je kunt testen of getallen
 een priemgetal zijn. Er mist nog een belangrijk onderdeel, namelijk de methode die test of een getal priem is. Deze gaan we niet zelf schrijven.
 
 * Importeer mbv Maven de dependency `org.apache.commons.commons-math3`, versie 3.6.1.
@@ -40,6 +40,6 @@ Dus eerst de id van de thread en dan het bericht dat hij zal sterven.
 ## Deel 5 Unittesten
 Je hebt nu drie klassen en nul unittests.
 
-* Zorg ervoor dat je voor alle publieke methodes een zinnige unittest hebt. 
+* Zorg ervoor dat je voor alle publieke methodes, waarvoor het mogelijk is, een zinnige unittest hebt. 
 
 

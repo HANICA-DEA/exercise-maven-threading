@@ -14,7 +14,7 @@ public class PrimeTester {
 
         while (true) {
 
-            int number = numberUnderTest.getNumber();
+            var number = numberUnderTest.getNumber();
 
             if (number > highestNumberToTest){
                 break;
