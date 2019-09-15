@@ -31,7 +31,7 @@ We gaan de code nu zo aanpassen dat de Thread die het getal 37 ontdekt als priem
 * Maak een Checked Exception met de naam `OuchIFoundThirtySevenAndHenceMustDieException`. Zet hem ook in de juiste package.
 * Zorg ervoor dat zo snel een 'PrimeTester' erachter komt dat hij 37 aan het testen is, hij de Exceptie gooit.
 * Deze exceptie al gegooit worden door de methode `startTesting` en opgevangen moeten worden door
-de `run()` methode. Wanneer hij de exceptie vangt moet hij de volgende regel naar `console.log` printen:
+de `run()` methode. Wanneer hij de exceptie vangt moet hij de volgende regel naar `System.out` printen:
 
 ``` 13 found Thirty Seven and must die. ```
 
