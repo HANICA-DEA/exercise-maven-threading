@@ -21,7 +21,7 @@ een priemgetal zijn. Er mist nog een belangrijk onderdeel, namelijk de methode d
 We gaan er nu voor zorgen dat je vanuit de `PrimeTestingApp` meerdere threads opstart met een `PrimeTester`. Deze zullen gelijktijdig naar priemgetallen gaan zoeken. Vier threads is genoeg.
 
 * Verhoog de stopconditie tot 2000. Deze kun je vinden op regel 8 van `PrimeTestingApp`.
-* Zorg ervoor dat je `PrimeTesters` als Threads kunt opstarten. (Pas hierbij de methode `startTesting` niet aan. Maar laat hem zoals hij is en roep hem aan vanuit de nieuwe `run()` methode)
+* Zorg ervoor dat je `PrimeTesters` als Threads kunt opstarten. (Pas hierbij de methode `startTesting` (van `PrimeTester`!) niet aan. Maar laat hem zoals hij is en roep hem aan vanuit de nieuwe `run()` methode)
 * Maak in `PrimeTestingApp` vier instanties van `PrimeTesters` en start deze op in afzonderlijke threads.
 * Maak je applicatie ThreadSafe
 
