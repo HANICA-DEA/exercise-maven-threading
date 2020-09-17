@@ -8,28 +8,28 @@ class NumberUnderTestTest {
 
     @Test
     void OneCallReturnsZero() {
-        //setup
+        // Arrange
         NumberUnderTest nut = new NumberUnderTest();
 
-        //test
+        // Act
         int result = nut.getNumber();
 
-        //verify
+        // Assert
         assertEquals(0, result);
     }
 
     @Test
     void FourCallsReturnsZeroThroughThree() {
-        //setup
+        // Arrange
         NumberUnderTest nut = new NumberUnderTest();
 
-        //test
+        // Act
         int result1 = nut.getNumber();
         int result2 = nut.getNumber();
         int result3 = nut.getNumber();
         int result4 = nut.getNumber();
 
-        //verify
+        // Assert
         assertEquals(0, result1);
         assertEquals(1, result2);
         assertEquals(2, result3);

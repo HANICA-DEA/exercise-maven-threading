@@ -19,13 +19,13 @@ class PrimeTesterTest {
 
     @Test
     void PrimesTo3Returns2and3() {
-        //setup
+        // Arrange
         PrimeTester pt = new PrimeTester(nut, 3);
 
-        //test
+        // Act
         pt.run();
 
-        //verify
+        // Assert
         String output = new String(ba.toByteArray());
         Assertions.assertTrue(output.contains(" found a prime number: 2")
                 && output.contains(" found a prime number: 3"));
@@ -33,22 +33,22 @@ class PrimeTesterTest {
 
     @Test
     void PrimesTo37ThrowsException() {
-        //setup
+        // Arrange
         PrimeTester pt = new PrimeTester(nut, 37);
 
-        //test & Verify
+        // Act & Assert
         Assertions.assertThrows(OuchIFoundThirtySevenAndHenceMustDieException.class, () -> pt.startTesting());
     }
 
     @Test
     void PrimesTo37ContainsExceptionText() {
-        //setup
+        // Arrange
         PrimeTester pt = new PrimeTester(nut, 37);
 
-        //test
+        // Act
         pt.run();
 
-        //verify
+        // Assert
         String output = new String(ba.toByteArray());
         Assertions.assertTrue(output.contains(" found Thirty Seven and must die."));
     }
