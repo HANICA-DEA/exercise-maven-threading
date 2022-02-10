@@ -40,6 +40,6 @@ Dus eerst de id van de thread en dan het bericht dat hij zal sterven.
 ## Deel 5 Unittesten
 Je hebt nu drie klassen en nul unittests.
 
-* Zorg ervoor dat je voor alle publieke methodes, waarvoor het mogelijk is, een zinnige unittest hebt. 
+* Zorg ervoor dat je voor alle publieke methodes, waarvoor het mogelijk is, een zinnige unittest heeft. 
 
 
