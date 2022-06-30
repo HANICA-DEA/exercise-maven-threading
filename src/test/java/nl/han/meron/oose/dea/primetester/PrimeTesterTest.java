@@ -18,7 +18,7 @@ class PrimeTesterTest {
     }
 
     @Test
-    void PrimesTo3Returns2and3() {
+    void primesTo3Returns2and3() {
         // Arrange
         PrimeTester pt = new PrimeTester(nut, 3);
 
@@ -32,7 +32,7 @@ class PrimeTesterTest {
     }
 
     @Test
-    void PrimesTo37ThrowsException() {
+    void primesTo37ThrowsException() {
         // Arrange
         PrimeTester pt = new PrimeTester(nut, 37);
 
@@ -41,7 +41,7 @@ class PrimeTesterTest {
     }
 
     @Test
-    void PrimesTo37ContainsExceptionText() {
+    void primesTo37ContainsExceptionText() {
         // Arrange
         PrimeTester pt = new PrimeTester(nut, 37);
 

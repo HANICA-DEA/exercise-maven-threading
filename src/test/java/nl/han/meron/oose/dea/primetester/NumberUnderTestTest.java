@@ -1,38 +1,43 @@
 package nl.han.meron.oose.dea.primetester;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class NumberUnderTestTest {
 
-    @Test
-    void OneCallReturnsZero() {
-        // Arrange
-        NumberUnderTest nut = new NumberUnderTest();
+    NumberUnderTest sut;
 
-        // Act
-        int result = nut.getNumber();
-
-        // Assert
-        assertEquals(0, result);
+    @BeforeEach
+    void setup() {
+        // Arrange.
+        sut = new NumberUnderTest();
     }
 
     @Test
-    void FourCallsReturnsZeroThroughThree() {
-        // Arrange
-        NumberUnderTest nut = new NumberUnderTest();
-
+    void oneCallReturnsZero() {
         // Act
-        int result1 = nut.getNumber();
-        int result2 = nut.getNumber();
-        int result3 = nut.getNumber();
-        int result4 = nut.getNumber();
+        int actual = sut.getNumber();
 
         // Assert
-        assertEquals(0, result1);
-        assertEquals(1, result2);
-        assertEquals(2, result3);
-        assertEquals(3, result4);
+        assertEquals(0, actual);
+    }
+
+    @Test
+    void fourCallsReturnsZeroThroughThree() {
+        // Act
+        int actual1 = sut.getNumber();
+        int actual2 = sut.getNumber();
+        int actual3 = sut.getNumber();
+        int actual4 = sut.getNumber();
+
+        // Assert
+        assertEquals(0, actual1);
+        assertEquals(1, actual2);
+        assertEquals(2, actual3);
+        assertEquals(3, actual4);
     }
 }
