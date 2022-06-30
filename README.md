@@ -64,5 +64,5 @@ Je hebt nu drie klassen en nul unittests.
 * Zorg ervoor dat je voor alle publieke methodes, waarvoor het mogelijk is, een zinnige unittest hebt.
 * Zorg voor clean code in je test code:
   * a) gebruik goede naamgeving van je testfuncties
-  * b) hanteer zoveel mogelijk standaard naamgeving van variabelen in de unit test code (`sut`, `actual`, `expected`)
+  * b) hanteer zoveel mogelijk standaard naamgeving van variabelen in de unit test code (zoals `sut`, `actual`, `expected`)
   * c) maak AAA pattern zichtbaar, en refactor evt. duplicatie uit je unit test code via bv. een `@beforeEach`.
