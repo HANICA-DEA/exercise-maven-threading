@@ -2,9 +2,9 @@
 
 ## Deel 1 opzet
 
-* Creeer een Java project met Maven
-    * Kies een `groupId` die zinnig is en aan de conventies voldoet
-    * Kies een `artifactId` die zinnig is.
+* Creëer een Java project met Maven
+  * Kies een `groupId` die zinnig is en aan de conventies voldoet
+  * Kies een `artifactId` die zinnig is.
 * Zorg ervoor dat je JUnit Jupiter versie `5.8.2` als dependency in je pom hebt staan
 * Plaats de drie bestanden die in dit project zitten op de juiste plek in je nieuwe project.
 
@@ -18,6 +18,7 @@ een priemgetal zijn. Er ontbreekt nog een belangrijk onderdeel, namelijk de meth
 * Met een beetje geluk heb je nu een werkende applicatie. Run hem via de commandline met Maven.
 
 ## Deel 3 Multithreaded maken
+
 We gaan er nu voor zorgen dat je vanuit de `PrimeTestingApp` meerdere threads opstart met een `PrimeTester`. Deze zullen gelijktijdig naar priemgetallen gaan zoeken. Vier threads is genoeg.
 
 * Verhoog de stopconditie tot 2000. Deze kun je vinden op regel 8 van `PrimeTestingApp`.
@@ -42,7 +43,26 @@ Dus eerst de id van de thread en dan het bericht dat hij zal sterven.
 Je hebt nu drie klassen en nul unittests.
 
 * Zorg ervoor dat je voor alle publieke methodes, waarvoor het mogelijk is, een zinnige unittest hebt. 
-* Zorg voor clean code in je test code
-  * gebruik goede naamgeving van je testfuncties
-  * hanteer zoveel mogelijk standaard naamgeving van variabelen in de unit test code (`sut`, `actual`, `expected`)
-  * maak AAA pattern zichtbaar, en refactor evt. duplicatie uit je unit test code via bv. een `@beforeEach`.
+=======
+
+## Deel 4 Omgaan met het getal 37
+
+We gaan de code nu zo aanpassen dat de Thread die het getal 37 ontdekt als priemgetal zal sterven.
+
+* Maak een checked exception met de naam `OuchIFoundThirtySevenAndHenceMustDieException`. Zet hem ook in de juiste package.
+* Zorg ervoor dat zo snel een 'PrimeTester' erachter komt dat hij 37 aan het testen is, hij de Exceptie gooit.
+* Gooi deze exceptie al in de methode `startTesting` en vang hem op in de `run()` methode. Wanneer hij de exceptie vangt moet hij de volgende regel naar `console.log` printen:
+
+`13 found Thirty Seven and must die.`
+
+Dus eerst de id van de thread en dan het bericht dat hij zal sterven.
+
+## Deel 5 Unittesten
+
+Je hebt nu drie klassen en nul unittests.
+
+* Zorg ervoor dat je voor alle publieke methodes, waarvoor het mogelijk is, een zinnige unittest hebt.
+* Zorg voor clean code in je test code:
+  * a) gebruik goede naamgeving van je testfuncties
+  * b) hanteer zoveel mogelijk standaard naamgeving van variabelen in de unit test code (`sut`, `actual`, `expected`)
+  * c) maak AAA pattern zichtbaar, en refactor evt. duplicatie uit je unit test code via bv. een `@beforeEach`.
