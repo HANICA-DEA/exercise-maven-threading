@@ -2,7 +2,7 @@
 
 ## Deel 1 opzet
 
-* Creëer een Java project met Maven
+* Creëer een Java project met Maven. Als je dat via IntelliJ doet is de naam van het project gelijk aan de artifactId en kiest IntelliJ voor groupId ```org.example```, dat kun je aanpassen onder "Advanced Settings".
   * Kies een `groupId` die zinnig is en aan de conventies voldoet
   * Kies een `artifactId` die zinnig is.
 * Zorg ervoor dat je JUnit Jupiter versie `5.8.2` als dependency in je pom hebt staan
